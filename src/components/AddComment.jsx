@@ -12,21 +12,24 @@ const AddComments = () => {
             name: Name,
             comment: Comment,
         })
+        setName("");
+        setComment("");
     }
     return (
         <>
-            <div id="respond">
-
-                <h3>Leave a Comment</h3>
-
+            <div id="respond" className="wrapper">
+                <h3>Write a Comment</h3>
+                
                 <form action="" id="commentform">
-                    <div>
+                    <div className="input-group">
                         <label htmlFor="Name">Name:</label>
-                        <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className="form-control" />
+                        <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className="form-control" required="required" />
                     </div>
-                    <label htmlFor="comment" class="required">Your message</label>
+                    <div className="input-group">
+                    <label htmlFor="comment" class="required">Your message:</label>
                     <input type="text" className="form-control" id="comment" value={Comment} onChange={(e) => setComment(e.target.value)} required="required"></input>
-                    <button className="btn btn-class color-lightgreen" type="submit" onClick={addCode}>SEND</button>
+                    </div>
+                    <button className="btn" type="submit" onClick={addCode}>Post</button>
                 </form>
 
             </div>

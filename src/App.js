@@ -8,11 +8,11 @@ import Comments from "./components/Comments"
 
 function App() {
   return (
-    <>
+    <div className="content">
     <Blog/>
     <Comments/>
     <AddComment/>
-    </>
+    </div>
   );
 }
 

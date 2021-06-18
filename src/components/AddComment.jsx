@@ -8,7 +8,7 @@ const AddComments = () => {
     const [Comment, setComment] = useState("");
     const addCode = (e) => {
         e.preventDefault();
-        db.collection("Comments").doc().set({
+        db.collection("Comments").doc(Name).set({
             name: Name,
             comment: Comment,
         })
